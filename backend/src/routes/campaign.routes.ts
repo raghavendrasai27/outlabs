@@ -1,0 +1,12 @@
+import { Router } from 'express';
+import { CampaignController } from '../controllers/campaign.controller';
+import { requireAuth } from '../middleware/auth';
+
+const router = Router();
+
+router.use(requireAuth);
+
+router.get('/', CampaignController.getCampaigns);
+router.get('/:id', CampaignController.getCampaignById);
+
+export default router;
