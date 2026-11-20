@@ -80,7 +80,7 @@ export const DashboardLayout: React.FC = () => {
 
             {/* Live BullMQ Dashboard link */}
             <a
-              href="http://localhost:5000/admin/queues"
+              href={`${import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000'}/admin/queues`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between px-3.5 py-2.5 rounded-lg text-sm font-medium text-slate-400 hover:text-indigo-400 hover:bg-slate-800/50 transition-all group"
